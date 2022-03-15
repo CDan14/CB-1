@@ -1,0 +1,12 @@
+#NEXUS
+begin data;
+dimensions ntax=5 nchar=15;
+format missing=? symbols="0~1";
+matrix
+brah  12345678998765?
+breh  001010100111000
+brih  11000110011100n
+broh  111111111111111
+bruh  000000000000000
+;
+end;

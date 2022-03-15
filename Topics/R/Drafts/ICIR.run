@@ -1,0 +1,42 @@
+macro= ;
+/* los comentarios se escriben idealmente dentro del macro*/
+
+/* proc diablo.mtr; */
+
+mult;
+
+nel*;
+
+var:
+   minlon
+   maxlon
+   IC 
+   IR 
+   actual
+ ;
+
+set actual ntrees ;
+set minlon 0 ;
+set maxlon 0 ;
+set  IC  0 ;
+set  IR  0 ;
+ 
+	loop = farris 0 nchar
+		set minlon minsteps[#farris] ;
+		set maxlon maxsteps[#farris] ;
+			if (('maxlon'-'minlon')==0)
+			set maxlon ('maxlon' + 1);
+			end;
+		set IC getresponse [ Calcular IC quote:'nchar'? ] ;
+        if ( 'IC' == 1 ) set IC 'minlon'/'actual'; end
+        set IR getresponse [ Calcular IR 'nchar'? ] ;
+        if ( 'IR' == 1 ) set IR ('maxlon'-'actual')/('maxlon'-'minlon') ;end
+		set actual length['actual' #farris] ;
+
+		quote: longitud minima:  'minlon' longitud maxima: 'maxlon' longitud actual 'actual' y indice de consistencia #1 'IC' y el indice de retencion es #1 'IR';
+
+stop;
+   
+proc/ ; 
+
+cc

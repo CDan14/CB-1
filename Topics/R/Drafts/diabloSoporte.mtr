@@ -1,0 +1,45 @@
+xread 'Zero (6-7), poly (1-5 8-12), Hennig=16, NONA r1=6, r3=12(ksave9)'10 10
+A  0000000000 
+B  1000000001 
+C  1100001002 
+D  1100100003 
+E  1100100104 
+F  1111011105 
+G  1111011006 
+H  1111000017 
+I  1111000108 
+J  1111000119 
+;
+cc - .;
+
+log mirar;
+
+macro=;
+
+loop =colapsado 0 6
+
+coll #colapsado
+
+mult;
+
+tp*;
+
+
+if (#colapsado !=4)
+ nel;
+end;
+
+stop
+
+proc/;
+
+
+1. Revisar reglas de colapsado
+
+2. Efecto de aditivos / no aditivos en jak y boot
+
+2.1 no aditivos
+2.2 aditivos
+2.3 2.1 y 2.2 pesando apriori el ultimo caracter y el sexto *2, *5 y *10
+2.4 2.3 con piwe 1, 6 y 10 
+2.5 sankoff camin-sokal para los caracteres 1 - 9 y 10 no aditivo

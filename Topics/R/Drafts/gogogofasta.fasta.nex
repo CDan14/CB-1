@@ -1,0 +1,88 @@
+#NEXUS
+[written Thu Jan 20 15:23:41 COT 2022 by Mesquite  version 3.61 (build 927) at MSI/192.168.56.1]
+
+BEGIN TAXA;
+	TITLE Taxa;
+	DIMENSIONS NTAX=4;
+	TAXLABELS
+		A B C D 
+	;
+
+END;
+
+
+BEGIN CHARACTERS;
+	TITLE  Character_Matrix;
+	DIMENSIONS  NCHAR=13;
+	FORMAT DATATYPE = DNA GAP = - MISSING = ?;
+	MATRIX
+	A  acgtaaaaaaa?-
+	B  acgtcgtaaacaa
+	C  acgtcgtcgtgaa
+	D  acgtcgtcgttaa
+
+;
+
+
+
+END;
+
+BEGIN ASSUMPTIONS;
+	TYPESET * UNTITLED   =  unord:  1- 13;
+
+END;
+
+BEGIN NOTES;
+
+	TAXABITS   NAME = newlyAddedTaxon on =  1 -  4;
+
+END;
+
+BEGIN CODONS;
+	CODESET * UNTITLED   =  universal:  1- 13;
+
+
+END;
+
+BEGIN MESQUITECHARMODELS;
+	ProbModelSet * UNTITLED   =  'Jukes-Cantor':  1- 13;
+END;
+
+Begin MESQUITE;
+		MESQUITESCRIPTVERSION 2;
+		TITLE AUTO;
+		tell ProjectCoordinator;
+		timeSaved 1642710221235;
+		getEmployee #mesquite.minimal.ManageTaxa.ManageTaxa;
+		tell It;
+			setID 0 1664665468607253517;
+		endTell;
+		getEmployee #mesquite.charMatrices.ManageCharacters.ManageCharacters;
+		tell It;
+			setID 0 6081708676711779966;
+			mqVersion 361;
+			checksumv 0 3 1145062014 null  getNumChars 13 numChars 13 getNumTaxa 4 numTaxa 4   short true   bits 1152921504606846991   states 15   sumSquaresStatesOnly 860.0 sumSquares 0.0 longCompressibleToShort false usingShortMatrix true   NumFiles 1 NumMatrices 1;
+			mqVersion;
+		endTell;
+		getWindow;
+		tell It;
+			suppress;
+			setResourcesState true false 100;
+			setPopoutState 300;
+			setExplanationSize 0;
+			setAnnotationSize 0;
+			setFontIncAnnot 0;
+			setFontIncExp 0;
+			setSize 700 464;
+			setLocation 8 8;
+			setFont SanSerif;
+			setFontSize 10;
+			getToolPalette;
+			tell It;
+			endTell;
+			desuppress;
+		endTell;
+		endTell;
+end;
+
+
