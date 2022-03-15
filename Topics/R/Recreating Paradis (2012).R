@@ -12,18 +12,18 @@ setwd("c:/Users/JoJo/Desktop/")
 list.files(pattern="rodent")
 tr<-read.tree("rodent.tree")
 plot(tr)
-###Yes you have, I hope.
+###Yes you have it, I hope.
 
 ##Fig. 4.2
-plot(tr, type="c", direction="l", main="Cladograma hacia la izquierda sin justificación ni longitudes de rama", use.edge.length=F)
+plot(tr, type="c", direction="l", main="Cladograma hacia la izquierda sin justificaciÃ³n ni longitudes de rama", use.edge.length=F)
 ##Fig. 4.3
 plot(tr, type="c", direction="l", main="Cladograma hacia la izquierda justificado sin longitudes de rama", use.edge.length=F, adj="0")
 ##Fig. 4.4
-plot(tr, type="u",lab4ut="axial",main="Árbol desenraizado para rodent.tree", no.margin=T, use.edge.length=F)
+plot(tr, type="u",lab4ut="axial",main="Ãrbol desenraizado para rodent.tree", no.margin=T, use.edge.length=F)
 ##Fig. 4.5
-plot(tr, type="f",lab4ut="axial",main="Árbol en ventilador para rodent.tree", no.margin=T)
+plot(tr, type="f",lab4ut="axial",main="Ãrbol en ventilador para rodent.tree", no.margin=T)
 ##Fig. 4.6
-plot(tr, type="f",lab4ut="axial",main="Árbol en circulo para rodent.tree", no.margin=T)
+plot(tr, type="f",lab4ut="axial",main="Ãrbol en circulo para rodent.tree", no.margin=T)
 ##Fig. 4.7
 plot(tr, main="Cladograma con valores de nodos")
 nodelabels(bg="white")
